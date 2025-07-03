@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Data Structures</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Data Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="array.html">Arrays</a></li>
+                <li><a href="linkedlist.html">Linked Lists</a></li>
+                <li><a href="stack.html">Stacks</a></li>
+                <li><a href="queue.html">Queue</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>What is a Data Structure?</h2>
+        <p>A data structure is a specialized format for organizing, processing, retrieving, and storing data. Efficient data structures are key to designing efficient algorithms, which is crucial for optimizing code performance.</p>
+
+        <h3>Why are Data Structures Important?</h3>
+        <p>Data structures provide a way of organizing data in such a way that operations like insertion, deletion, search, and modification can be performed efficiently. Choosing the correct data structure is critical in designing efficient programs, particularly for complex tasks such as database management, file handling, and operating systems.</p>
+
+        <h3>Types of Data Structures</h3>
+        <p>Data structures can be broadly classified into two categories:</p>
+        <ul>
+            <li><strong>Linear Data Structures:</strong> Elements are arranged sequentially, one after the other. Examples include Arrays, Linked Lists, Stacks, and Queues.</li>
+            <li><strong>Non-Linear Data Structures:</strong> Elements are arranged in a hierarchical manner. Examples include Trees, Graphs, and Heaps.</li>
+        </ul>
+
+        <h3>Data Structures in C</h3>
+        <p>C programming language provides built-in data types like arrays and structures, which can be used to create custom data structures like linked lists, stacks, queues, trees, etc. By using pointers, dynamic memory allocation, and user-defined types, you can implement data structures that are efficient and easy to manage.</p>
+
+        <h4>Common Data Structures in C</h4>
+        <ul>
+            <li><strong>Arrays:</strong> Arrays are a simple form of a linear data structure where elements are stored in contiguous memory locations and accessed using an index.</li>
+            <li><strong>Linked Lists:</strong> Linked lists are a collection of nodes where each node contains data and a reference (pointer) to the next node.</li>
+            <li><strong>Stacks:</strong> A stack is a linear data structure that operates on the LIFO (Last In, First Out) principle. The most common operations are push (to add an element) and pop (to remove an element).</li>
+            <li><strong>Queues:</strong> A queue is a linear data structure that operates on the FIFO (First In, First Out) principle. It supports enqueue (to add an element) and dequeue (to remove an element).</li>
+        </ul>
+
+        <h3>Basic Operations on Data Structures</h3>
+        <ul>
+            <li><strong>Insertion:</strong> Adding a new element to a data structure (e.g., adding an element to an array or linked list).</li>
+            <li><strong>Deletion:</strong> Removing an existing element from a data structure (e.g., removing the top element from a stack).</li>
+            <li><strong>Traversal:</strong> Accessing each element of a data structure to process it (e.g., traversing through a linked list to search for an element).</li>
+            <li><strong>Searching:</strong> Finding a particular element in a data structure (e.g., binary search in an array).</li>
+            <li><strong>Sorting:</strong> Arranging the elements of a data structure in a particular order (e.g., bubble sort on an array).</li>
+        </ul>
+
+        <h3>Memory Management in C</h3>
+        <p>Memory management is crucial when dealing with data structures in C. The <code>malloc()</code>, <code>calloc()</code>, <code>realloc()</code>, and <code>free()</code> functions in C allow dynamic memory allocation, making it possible to efficiently manage memory as data grows.</p>
+
+        <h4>Example of Dynamic Memory Allocation for a Linked List in C:</h4>
+        <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+// Structure for a node in the linked list
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+int main() {
+    struct Node* head = NULL; // Initialize the head of the linked list
+    struct Node* temp;
+
+    // Allocate memory dynamically using malloc
+    head = (struct Node*)malloc(sizeof(struct Node));
+
+    // Assign data and set next pointer to NULL
+    head->data = 10;
+    head->next = NULL;
+
+    // Allocate another node
+    temp = (struct Node*)malloc(sizeof(struct Node));
+    temp->data = 20;
+    temp->next = NULL;
+
+    // Link the first node to the second node
+    head->next = temp;
+
+    // Printing the data of the linked list nodes
+    printf("Data in first node: %d\n", head->data);
+    printf("Data in second node: %d\n", head->next->data);
+
+    // Free dynamically allocated memory
+    free(head);
+    free(temp);
+
+    return 0;
+}
+        </code></pre>
+        <p>In this example, memory for the nodes of a linked list is dynamically allocated using the <code>malloc()</code> function, and memory is deallocated using <code>free()</code>.</p>
+
+        <h3>Applications of Data Structures</h3>
+        <p>Data structures are fundamental in software development and have a wide range of applications, such as:</p>
+        <ul>
+            <li>Implementing databases, file systems, and memory management.</li>
+            <li>Designing algorithms like search engines, sorting mechanisms, and network packet routing.</li>
+            <li>Building complex data processing systems such as compilers and interpreters.</li>
+            <li>Solving graph-related problems (e.g., shortest path algorithms).</li>
+        </ul>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tutorial Website</p>
+    </footer>
+</body>
+</html>

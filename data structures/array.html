@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in Data Structures</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Arrays in Data Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="array.html">Arrays</a></li>
+                <li><a href="linkedlist.html">Linked Lists</a></li>
+                <li><a href="stack.html">Stacks</a></li>
+                <li><a href="queue.html">Queue</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>What is an Array?</h2>
+        <p>An array is a collection of items stored at contiguous memory locations. It is a linear data structure, meaning the elements are accessed in a sequential order. Arrays allow you to store multiple values of the same data type in a single variable, and access them using an index.</p>
+        
+        <h3>Characteristics of Arrays</h3>
+        <ul>
+            <li><strong>Fixed Size:</strong> The size of an array is defined at the time of declaration, and cannot be changed later.</li>
+            <li><strong>Homogeneous Data:</strong> Arrays can store multiple values, but all must be of the same data type (e.g., int, float, char).</li>
+            <li><strong>Random Access:</strong> Elements in an array can be accessed directly using their index, which allows for faster access.</li>
+        </ul>
+
+        <h3>Declaration and Initialization in C</h3>
+        <p>Arrays in C can be declared and initialized as follows:</p>
+        <pre><code>
+// Declaring an integer array of size 5
+int arr[5];
+
+// Initializing an array during declaration
+int arr[5] = {1, 2, 3, 4, 5};
+
+// Accessing array elements
+printf("First element: %d\n", arr[0]);  // Output: 1
+printf("Third element: %d\n", arr[2]);  // Output: 3
+        </code></pre>
+
+        <h3>Memory Representation of Arrays</h3>
+        <p>In C, an array stores elements in contiguous memory locations. The base address of the array is the address of the first element, and subsequent elements are located at increments of the data type size. For example, if an integer array starts at address 1000, the second element will be at address 1004 (assuming each int occupies 4 bytes).</p>
+        
+        <h3>Basic Operations on Arrays</h3>
+        <ul>
+            <li><strong>Traversal:</strong> Accessing each element of the array, typically done using a loop.</li>
+            <li><strong>Insertion:</strong> Adding an element at a specific index. However, if the array is full, insertion is not possible without resizing.</li>
+            <li><strong>Deletion:</strong> Removing an element at a specific index, shifting subsequent elements to fill the gap.</li>
+            <li><strong>Searching:</strong> Finding an element within the array, using either linear search or binary search (if the array is sorted).</li>
+            <li><strong>Sorting:</strong> Arranging the elements in ascending or descending order using algorithms like bubble sort, selection sort, etc.</li>
+        </ul>
+
+        <h4>Example of Array Traversal in C</h4>
+        <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    
+    // Traversing the array using a loop
+    for (int i = 0; i < 5; i++) {
+        printf("Element at index %d: %d\n", i, arr[i]);
+    }
+    return 0;
+}
+        </code></pre>
+
+        <h4>Advantages of Arrays</h4>
+        <ul>
+            <li><strong>Random Access:</strong> You can directly access any element using its index.</li>
+            <li><strong>Simplicity:</strong> Arrays are simple to declare and use.</li>
+        </ul>
+
+        <h4>Limitations of Arrays</h4>
+        <ul>
+            <li><strong>Fixed Size:</strong> The size of an array is fixed and cannot be changed after declaration. This can lead to either memory wastage or the inability to store additional elements if the array is full.</li>
+            <li><strong>Homogeneous Data:</strong> Arrays can only store data of a single data type, which limits their flexibility.</li>
+            <li><strong>Costly Insertion/Deletion:</strong> Inserting or deleting elements requires shifting elements, which makes these operations costly in terms of time complexity.</li>
+        </ul>
+
+        <h3>Multidimensional Arrays</h3>
+        <p>In C, you can also declare and use multidimensional arrays. The most common form is the two-dimensional array (matrix), where each element is accessed by two indices (rows and columns).</p>
+        <pre><code>
+// Declaring a 2D array (matrix) of size 2x3
+int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+
+// Accessing elements in a 2D array
+printf("Element at [1][2]: %d\n", matrix[1][2]);  // Output: 6
+        </code></pre>
+
+        <h3>Applications of Arrays</h3>
+        <p>Arrays are used in various applications, including:</p>
+        <ul>
+            <li>Storing data elements in a simple structure for easy traversal (e.g., a list of students' marks).</li>
+            <li>Implementing other data structures like stacks, queues, heaps, etc.</li>
+            <li>Used in matrix operations in scientific calculations.</li>
+            <li>Buffering data in I/O operations (e.g., file systems).</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tutorial Website</p>
+    </footer>
+</body>
+</html>

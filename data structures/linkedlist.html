@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List in Data Structures</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Linked List in Data Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="array.html">Arrays</a></li>
+                <li><a href="linkedlist.html">Linked Lists</a></li>
+                <li><a href="stack.html">Stacks</a></li>
+                <li><a href="queue.html">Queues</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>What is a Linked List?</h2>
+        <p>A linked list is a linear data structure where elements are stored at non-contiguous memory locations. Each element (node) points to the next node, forming a chain. A node consists of two parts: the data and the pointer to the next node.</p>
+        
+        <h3>Types of Linked Lists</h3>
+        <ul>
+            <li><strong>Singly Linked List</strong>: Each node points to the next node.</li>
+            <li><strong>Doubly Linked List</strong>: Each node points to both the next and the previous node.</li>
+            <li><strong>Circular Linked List</strong>: The last node points to the first node.</li>
+        </ul>
+
+        <h3>Basic Operations</h3>
+        <ul>
+            <li><strong>Insertion</strong>: Add a node to the list.</li>
+            <li><strong>Deletion</strong>: Remove a node from the list.</li>
+            <li><strong>Traversal</strong>: Access each node in the list.</li>
+        </ul>
+
+        <h3>Example of Linked List Code in C</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void insertAtEnd(struct Node** head_ref, int new_data) {
+    struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    struct Node* last = *head_ref;
+    new_node->data = new_data;
+    new_node->next = NULL;
+    
+    if (*head_ref == NULL) {
+        *head_ref = new_node;
+        return;
+    }
+    
+    while (last->next != NULL) {
+        last = last->next;
+    }
+    
+    last->next = new_node;
+}
+        </code></pre>
+
+        <p><strong>Output:</strong> Linked list with nodes 10 -> 20 -> 30</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tutorial Website</p>
+    </footer>
+</body>
+</html>

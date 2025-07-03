@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue in Data Structures</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Queue in Data Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="array.html">Arrays</a></li>
+                <li><a href="linkedlist.html">Linked Lists</a></li>
+                <li><a href="stack.html">Stacks</a></li>
+                <li><a href="queue.html">Queues</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>What is a Queue?</h2>
+        <p>A queue is a linear data structure that follows the FIFO (First In First Out) principle. In a queue, the first element added is the first one to be removed. Queue operations are performed from both ends: front and rear.</p>
+        
+        <h3>Basic Operations</h3>
+        <ul>
+            <li><strong>Enqueue</strong>: Add an element to the rear of the queue.</li>
+            <li><strong>Dequeue</strong>: Remove an element from the front of the queue.</li>
+        </ul>
+
+        <h3>Example of Queue Code in C</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+#define SIZE 5
+
+int queue[SIZE], front = -1, rear = -1;
+
+void enqueue(int value) {
+    if (rear == SIZE - 1)
+        printf("Queue is full!\n");
+    else {
+        if (front == -1)
+            front = 0;
+        rear++;
+        queue[rear] = value;
+    }
+}
+        </code></pre>
+
+        <p><strong>Output:</strong> Queue elements: 10, 20, 30</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tutorial Website</p>
+    </footer>
+</body>
+</html>

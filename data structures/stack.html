@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack in Data Structures</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stack in Data Structures</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="intro.html">Introduction</a></li>
+                <li><a href="array.html">Arrays</a></li>
+                <li><a href="linkedlist.html">Linked Lists</a></li>
+                <li><a href="stack.html">Stacks</a></li>
+                <li><a href="queue.html">Queues</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>What is a Stack?</h2>
+        <p>A stack is a linear data structure that follows the LIFO (Last In First Out) principle. In a stack, the last element added is the first one to be removed. Stack operations are performed only from the top.</p>
+        
+        <h3>Basic Operations</h3>
+        <ul>
+            <li><strong>Push</strong>: Add an element to the top of the stack.</li>
+            <li><strong>Pop</strong>: Remove an element from the top of the stack.</li>
+            <li><strong>Peek</strong>: Access the element at the top of the stack without removing it.</li>
+        </ul>
+
+        <h3>Example of Stack Code in C</h3>
+        <pre><code>
+#include &lt;stdio.h&gt;
+#define SIZE 5
+
+int stack[SIZE], top = -1;
+
+void push(int value) {
+    if (top == SIZE - 1)
+        printf("Stack overflow!\n");
+    else {
+        top++;
+        stack[top] = value;
+    }
+}
+        </code></pre>
+
+        <p><strong>Output:</strong> Stack elements pushed: 10, 20, 30</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Tutorial Website</p>
+    </footer>
+</body>
+</html>
